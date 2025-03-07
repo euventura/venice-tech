@@ -18,10 +18,22 @@ class ProductFactory extends Factory
         return [
             'name' => fake()->name(),
             'slug' => fake()->slug(),
-            'image' => fake()->imageUrl(640, 480, 'Product Image', true, 'Product Name'),
+            'image' => fake()->imageUrl(640, 480, 'Product', true),
             'description' => fake()->paragraph(),
-            'category_id' => Category::factory(),
-            'brand_id' => Brand::factory()
+            'category_id' => function (array $attr) {
+                $category = Category::find(1);
+                if (! $category) {
+                    return Category::factory();
+                }
+                return $category;
+            },
+            'brand_id' => function (array $attr) {
+                $brand = Brand::find(1);
+                if (! $brand) {
+                    return Brand::factory();
+                }
+                return $brand;
+            },
         ];
     }
 }

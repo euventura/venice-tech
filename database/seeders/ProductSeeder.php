@@ -15,14 +15,19 @@ class ProductSeeder extends Seeder
      */
     public function run(): void
     {
+        Category::truncate();
+        Brand::truncate();
+        Product::truncate();
+
+        Category::factory()->count(1)->create();
         Brand::factory()
-            ->has(Product::factory()->count(5))
-            ->count(10)
+            ->has(Product::factory()->count(20))
+            ->count(5)
             ->create();
 
         Category::factory()
-            ->has(Product::factory()->count(5))
-            ->count(10)
+            ->has(Product::factory()->count(20))
+            ->count(5)
             ->create();
     }
 }
