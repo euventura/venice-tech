@@ -42,7 +42,7 @@ docker run --rm \
 ```
 Pode-se Criar usuários através da interface, mas se quiser um usuário padrão com os dados:
 email: venice@teste.com
-senha: password,
+senha: password
 ```bash
 ./vendor/bin/sail artisan db:seed --class=UserSeeder
 ```
