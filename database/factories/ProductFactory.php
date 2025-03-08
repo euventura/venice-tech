@@ -25,6 +25,7 @@ class ProductFactory extends Factory
                 if (! $category) {
                     return Category::factory();
                 }
+
                 return $category;
             },
             'brand_id' => function (array $attr) {
@@ -32,6 +33,7 @@ class ProductFactory extends Factory
                 if (! $brand) {
                     return Brand::factory();
                 }
+
                 return $brand;
             },
         ];

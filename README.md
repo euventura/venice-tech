@@ -1,3 +1,6 @@
+# Status do Projeto
+[![codecov](https://codecov.io/gh/euventura/venice-tech/graph/badge.svg?token=9G563VZW2P)](https://codecov.io/gh/euventura/venice-tech)
+
 # Sistema de Filtro de Produtos
 
 Este é um sistema de filtro de produtos desenvolvido com Laravel e Livewire para o teste da Venice Tech

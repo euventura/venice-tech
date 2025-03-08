@@ -12,23 +12,24 @@ class FindProduct extends Component
 {
     #[Session]
     public $search = '';
+
     #[Session]
     public $selectedCategories = [];
+
     #[Session]
     public $selectedBrands = [];
-
 
     public function render()
     {
         $products = Product::query()
-            ->when(!empty($this->selectedCategories), function ($query) {
+            ->when(! empty($this->selectedCategories), function ($query) {
                 $query->whereIn('category_id', $this->selectedCategories);
             })
-            ->when(!empty($this->selectedBrands), function ($query) {
+            ->when(! empty($this->selectedBrands), function ($query) {
                 $query->whereIn('brand_id', $this->selectedBrands);
             })
             ->when($this->search, function ($query) {
-                $query->whereLike('name',  '%' . $this->search . '%', false);
+                $query->whereLike('name', '%'.$this->search.'%', false);
             })
             ->paginate(20);
 

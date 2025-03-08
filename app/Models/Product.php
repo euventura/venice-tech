@@ -24,7 +24,7 @@ class Product extends Model
     protected function image(): Attribute
     {
         return Attribute::make(
-            get: fn(string $value) => str_replace('via.placeholder.com', 'dummyimage.com', $value),
+            get: fn (string $value) => str_replace('via.placeholder.com', 'dummyimage.com', $value),
         );
     }
 }

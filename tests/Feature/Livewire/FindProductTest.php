@@ -34,7 +34,7 @@ class FindProductTest extends TestCase
     {
         $user = User::factory()->create();
         $this->seed(ProductSeeder::class);
-        $category  = Category::with('products')->find(2);
+        $category = Category::with('products')->find(2);
 
         Livewire::actingAs($user)
             ->test(FindProduct::class, ['selectedCategories' => [$category->id]])
@@ -46,7 +46,7 @@ class FindProductTest extends TestCase
     {
         $user = User::factory()->create();
         $this->seed(ProductSeeder::class);
-        $brand  = Brand::with('products')->find(2);
+        $brand = Brand::with('products')->find(2);
 
         Livewire::actingAs($user)
             ->test(FindProduct::class, ['selectedBrands' => [$brand->id]])
