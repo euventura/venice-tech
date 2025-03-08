@@ -7,6 +7,14 @@
 
 Este é um sistema de filtro de produtos desenvolvido com Laravel e Livewire para o teste da Venice Tech
 
+## Teste Online
+
+Fiz um deploy no laravel Cloud para testes rápidos do funcionamento
+
+https://venice-tech.laravel.cloud/
+
+
+
 ## Requisitos
 
 - Node.js e NPM
