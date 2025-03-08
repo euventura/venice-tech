@@ -1,4 +1,6 @@
 # Status do Projeto
+[![Laravel](https://github.com/euventura/venice-tech/actions/workflows/tests.yml/badge.svg?branch=master)](https://github.com/euventura/venice-tech/actions/workflows/tests.yml)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=euventura_venice-tech&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=euventura_venice-tech)
 [![codecov](https://codecov.io/gh/euventura/venice-tech/graph/badge.svg?token=9G563VZW2P)](https://codecov.io/gh/euventura/venice-tech)
 
 # Sistema de Filtro de Produtos
