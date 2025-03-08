@@ -53,9 +53,6 @@ jobs:
       - name: Run Tests
         run: php artisan test --coverage-text --coverage-clover=coverage.xml
 
-      - name: Attest Build Provenance
-        uses: actions/attest-build-provenance@v2.2.3
-
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v5
         with:
